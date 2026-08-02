@@ -1,3 +1,4 @@
+import random
 import secrets
 import string
 while True:
@@ -11,7 +12,11 @@ while True:
     else:
         break
 
+length = random.choice([12,13,14,15,16])
+
 characters = string.ascii_letters + string.digits + string.punctuation
     
-password = ''.join(secrets.choice(characters) for _ in range(16))
-print(password)
+password = ''.join(secrets.choice(characters) for _ in range(length))
+
+print("\nHere is your password:")
+print(f"    {password} --> {length} characters\n")
