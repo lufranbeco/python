@@ -32,29 +32,33 @@ while game == True:
                     print("\nOkay, another round.")
                     break
 
-# game = True
-# while game == True:
-#     min = int(input("\nWrite the minimun number: "))
-#     max = int(input("\nWrite the maximun number: "))
-#     number = random.randint(min, max)
+    elif question == 2:
 
-#     while True:
-#         user = int(input(f"\nGuess my number between {min} - {max}: "))
+        print("\nOkay, I will choose a number that you will try to guess")
+        game = True
+        
+        while game == True:
+            min = int(input("\nWrite the minimun number: "))
+            max = int(input("\nWrite the maximun number: "))
+            number = random.randint(min, max)
 
-#         if user < min or user > max:
-#             print(f"Mmm, it's between {min} and {max}")
+            while True:
+                user = int(input(f"\nGuess my number between {min} - {max}: "))
 
-#         elif user == number:
-#             print("\n¡You guessed the number, congratulations!")
-#             opcion = str(input("\n¿Do you wanna play again? y/n: "))
+                if user < min or user > max:
+                    print(f"Mmm, it's between {min} and {max}")
 
-#             if opcion.upper() == "N":
-#                 print("\nIt's OK, see you soon...\n")
-#                 game=False
-#                 break
+                elif user == number:
+                    print("\n¡You guessed the number, congratulations!")
+                    opcion = str(input("\n¿Do you wanna play again? y/n: "))
 
-#             else:
-#                 break
+                    if opcion.upper() == "N":
+                        print("\nIt's OK, see you soon...\n")
+                        game=False
+                        break
 
-#         else:
-#             print("\nWrong number.. try again.")
+                    else:
+                        break
+
+                else:
+                    print("\nWrong number.. try again.")
